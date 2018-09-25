@@ -1,0 +1,18 @@
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+
+<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<%= password_field_tag(:password) %>
+<%= hidden_field_tag(:parent_id, "5") %>
+<%= search_field(:user, :name) %>
+<%= telephone_field(:user, :phone) %>
+<%= date_field(:user, :born_on) %>
+<%= datetime_field(:user, :meeting_time) %>
+<%= datetime_local_field(:user, :graduation_day) %>
+<%= month_field(:user, :birthday_month) %>
+<%= week_field(:user, :birthday_week) %>
+<%= url_field(:user, :homepage) %>
+<%= email_field(:user, :address) %>
+<%= color_field(:user, :favorite_color) %>
+<%= time_field(:task, :started_at) %>

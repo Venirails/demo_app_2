@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AshokApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="main">
+    <div id="header">  
+      <h1>My <span>First App</span></h1>	
+	  <h2>Ruby on Rails</h2>
+    </div><!--close header-->			
+    <div class="container_header"><p>&nbsp;</p></div>
+    <div id="site_background"> 
+      <div id="banner">  
+		<div id="banner_content">
+		</div><!--close banner_content-->	
+      </div><!--close banner-->		
+	  <div id="site_content">
+	    <div id="menubar">
+          <ul class="lavaLampWithImage" id="lava_menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><% if session[:admin] %>				
+<a href="/admin/logout">Admin Logout</a>
+<% else %>
+<a href="/admin/login">Admin Login</a>
+<% end %></li>
+          </ul>
+	      <div id="contact">
+	        <a href="#"><img src="/assets/icons/twitter.png" alt="twitter" /></a>
+            <a href="#"><img src="/assets/icons/facebook.png" alt="facebook" /></a>
+            <a href="#"><img src="/assets/icons/linkedin.png" alt="linkedin" /></a>
+	      </div><!--close contact-->
+	    </div><!--close menubar-->	
+        <div id="content">
+          <div class="content_item">
+	  <%= yield %>
+		  </div><!--close content_item-->	
+	      
+		  <div class="sidebar_container">       
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Latest Blog</h2>
+			    <h4>April 2012</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		          <a href="#">Read more</a>
+              </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->     		
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Latest Blog</h2>
+		  	    <h4>April 2012</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		          <a href="#">Read more</a>
+              </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->  
+		    <div class="sidebar">
+              <div class="sidebar_item">
+                <h2>Latest Blog</h2>
+			    <h4>April 2012</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
+		          <a href="#">Read more</a>
+              </div><!--close sidebar_item--> 
+            </div><!--close sidebar-->  
+           </div><!--close sidebar_container-->	
+           <br style="clear:both;" />
+        </div><!--close content-->	
+      </div><!--close site_content-->	
+	</div><!--close site_background-->	
+    <div id="footer">  
+	  <div id="footer_content">
+	  MyApp @All rights reserved
+      </div><!--close footer_content-->	
+    </div><!--close footer-->	
+  </div><!--close main-->	
+
+
+</body>
+</html>

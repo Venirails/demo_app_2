@@ -1,0 +1,16 @@
+<h2>Admin Login</h2>
+<%= flash[:notice] %>
+<%= form_for(:admin) do |f| %>
+  <div class="field">
+    <%= f.label :admin_name %><br>
+    <%= f.text_field :admin_name %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
+  </div>
+    <div class="actions">
+    <%= f.submit "Login"%>
+  </div>
+<% end %>
+
